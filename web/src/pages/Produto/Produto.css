@@ -1,0 +1,6 @@
+
+.slide__section{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+}

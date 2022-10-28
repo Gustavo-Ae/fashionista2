@@ -33,7 +33,7 @@ router.route('/produtos/:id')
         }
     })
 
-// Buscar produtos por categoria
+// Buscar produtos pelo nome da categoria
 router.route('/categorias/:categoria')
     .get(async (req, res) => {
         const category = req.params.categoria

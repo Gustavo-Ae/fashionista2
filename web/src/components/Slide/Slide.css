@@ -1,0 +1,48 @@
+.slide__container{
+    max-width: 89vw;
+}
+
+.slide__titulo{
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.carousel{
+    display: flex;
+    overflow-x: auto; 
+    scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.carousel .cartao-produto{
+    margin: 0 0.625rem;
+    margin-bottom: 5.1rem;
+}
+
+.buttons__slide{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+}
+
+.RolagemParaLados__btn--hover:hover{
+    background-color: #BAB1B1;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+
+.buttons__slide button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons__slide button:first-child{
+    transform: rotate(180deg);
+}
