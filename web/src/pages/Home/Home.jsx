@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import CardProduto from "../../components/MainHome/CardProduto/CardProduto";
 
 import Produto from "../../components/MainHome/CardProduto/CardProduto";
 
@@ -11,12 +12,12 @@ const Home = () => {
   const [saleProducts, setSaleProducts] = useState([])
 
   useEffect(() => {
-    axios.get('https://fashionista-ecommerce.herokuapp.com/promocao/produtos/')
+    axios.get('http://localhost:5450/promocao/produtos/')
       .then(res => setSaleProducts(res.data))
   }, [])
 
   useEffect(() => {
-    axios.get('https://fashionista-ecommerce.herokuapp.com/novidades/produtos/')
+    axios.get('http://localhost:5450/novidades/produtos/')
       .then(res => setNewProducts(res.data))
   }, [])
 
@@ -116,15 +117,16 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
       <div className="melhoresOfertas" id="melhoresOfertas">
-        <div className="container-titulo-descricao">
-          <h1 className="ofertas-title">Melhores Ofertas</h1>
-          <p className="container-ofertas-text">Confira nossas ofertas e promoções, aproveite!</p>
+        <div className="melhoresOfertas__header__container">
+          <h1 className="melhoresOfertas__titulo">Melhores Ofertas</h1>
+          <p className="melhoresOfertas__descricao">Confira nossas ofertas e promoções, aproveite!</p>
         </div>
 
-        <div className="container-melhoresOfertas">
+        <div className="melhoresOfertas__container">
           {saleProducts.slice(0, 8).map((produto) => (
-            <Produto
+            <CardProduto
               key={produto.product_id}
               product_id={produto.product_id}
               img_url={produto.img_url}
@@ -134,7 +136,9 @@ const Home = () => {
             />
           ))}
         </div>
-      </div>    </div>
+      </div>  
+
+    </div>
   );
 };
 
