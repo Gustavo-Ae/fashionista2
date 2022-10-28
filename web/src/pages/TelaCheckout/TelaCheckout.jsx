@@ -32,7 +32,7 @@ const TelaCheckout = () => {
     const getInfoUserById = async () => {
 
       if(userId){
-        await axios.get(`https://fashionista-ecommerce.herokuapp.com/user/${userId}`)
+        await axios.get(`http://localhost:5450/user/${userId}`)
           .then(res => setInfoUser(res.data))
           .catch(function(error){
             console.log(error.response)
@@ -66,7 +66,7 @@ const TelaCheckout = () => {
       return
     };
     try {
-      await axios.post(`https://fashionista-ecommerce.herokuapp.com/pedidos/${userId}`, {
+      await axios.post(`http://localhost:5450/pedidos/${userId}`, {
         payment_mode_id: paymentModeId,
         order_total: totalPrice,
         products: productsCart

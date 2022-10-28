@@ -21,7 +21,7 @@ const TelaUsuario = () => {
   }
 
   useEffect(() => {
-    axios.get(`https://fashionista-ecommerce.herokuapp.com/${userId}/pedidos`)
+    axios.get(`http://localhost:5450/${userId}/pedidos`)
       .then(res => setOrders(res.data))
   }, [userId])
 
