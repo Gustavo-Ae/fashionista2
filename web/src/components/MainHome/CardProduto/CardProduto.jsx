@@ -1,13 +1,20 @@
 import React from 'react'
 import './CardProduto.css'
 
-const produto = ({ product_id, img_url, name, regular_price, actual_price }) => {
-    // const { img_url, name, regular_price, actual_price } = item;
-    const link = `http://localhost:3000/produto/${product_id}`
+import { Link } from 'react-router-dom';
+
+const CardProduto = ({ product_id, img_url, name, regular_price, actual_price }) => {
+
+    const link = `/produto/${product_id}`
+
+    const irParaTopoDaPagina = () =>{
+        // const rota = window.location.pathname
+        window.scroll(0, 0);
+    }
 
     return (
-        <div className="cartao-produto">
-            <a href={link}>
+        <div className="cartao-produto" onClick={irParaTopoDaPagina}>
+            <Link to={link}>
                 <img src={img_url} className="imagem-produto" alt="imagem produto" />
                 <div className="informacao-produto">
                     <div className="avaliacao-produto">
@@ -19,9 +26,9 @@ const produto = ({ product_id, img_url, name, regular_price, actual_price }) => 
                         <span className="preco-atual">R${Number(actual_price).toFixed(2).replace('.', ',')}</span>
                     </div>
                 </div>
-            </a>
+            </Link>
         </div>
     )
 }
 
-export default produto
+export default CardProduto
