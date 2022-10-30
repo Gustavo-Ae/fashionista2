@@ -12,9 +12,13 @@ const Produto = () => {
   const params = useParams()
   const [product, setProduct] = useState([])
 
+  const buscarProdutoPeloId = async () => {
+    await axios.get(`http://localhost:5450/produtos/${params.id}`)
+    .then(res => setProduct(res.data))
+  }
+
   useEffect(() => {
-    axios.get(`http://localhost:5450/produtos/${params.id}`)
-      .then(res => setProduct(res.data))
+    buscarProdutoPeloId();
   }, [params])
 
   const idCategoria = product[0]?.category_id
