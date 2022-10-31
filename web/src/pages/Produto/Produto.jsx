@@ -8,16 +8,18 @@ import Slide from "../../components/Slide/Slide";
 
 import "./Produto.css"
 
+
 const Produto = () => {
   const params = useParams()
   const [product, setProduct] = useState([])
-
-  const buscarProdutoPeloId = async () => {
-    await axios.get(`http://localhost:5450/produtos/${params.id}`)
-    .then(res => setProduct(res.data))
-  }
-
+  
   useEffect(() => {
+    
+    const buscarProdutoPeloId = async () => {
+      await axios.get(`http://localhost:5450/produtos/${params.id}`)
+      .then(res => setProduct(res.data))
+    }
+
     buscarProdutoPeloId();
   }, [params])
 

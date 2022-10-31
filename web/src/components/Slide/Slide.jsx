@@ -6,16 +6,18 @@ import CardProduto from "../../components/MainHome/CardProduto/CardProduto";
 
 import "./Slide.css"
 
+
 const Slide = ({idProdutoRemover, nomeCategoria}) => {
 
     const [products, setProduct] = useState([])
 
-    const buscarCategoriaPeloNome = async () => {
-        await axios.get(`http://localhost:5450/categorias/${nomeCategoria}`)
-        .then(res => setProduct((res.data).filter((produto) => produto.product_id !== idProdutoRemover)))
-    }
-
     useEffect(() => {
+
+        const buscarCategoriaPeloNome = async () => {
+            await axios.get(`http://localhost:5450/categorias/${nomeCategoria}`)
+            .then(res => setProduct((res.data).filter((produto) => produto.product_id !== idProdutoRemover)))
+        }
+
         buscarCategoriaPeloNome();
     }, [idProdutoRemover, nomeCategoria])
 
