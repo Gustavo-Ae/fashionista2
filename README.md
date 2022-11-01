@@ -87,7 +87,7 @@ A recomendação é para que o deploy seja feito no Netlify ou similar para o Fr
 
 ## 🗃 Links de organização 
 
-- Aplicação no Netlify: https://fashionista-hackadev.netlify.app
+- Aplicação no Netlify: https://fashionista-dev.netlify.app
 - Notion (Fase 2): https://broad-ground-81b.notion.site/Hackadev-Fashionista-Fase-2-c4af1190883d46b0af4d930bf58cae9a
 - Notion (Fase 3): https://broad-ground-81b.notion.site/Hackadev-Fashionista-Fase-3-1c76f29cd07147878ca2fef4c31936d5
 - Layout no Figma: https://www.figma.com/file/hVS7dnhOhsgdaSw1zi57pL/Fashionista-E-commerce?node-id=0%3A1
