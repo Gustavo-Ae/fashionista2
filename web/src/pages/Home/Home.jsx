@@ -1,9 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import CardProduto from "../../components/MainHome/CardProduto/CardProduto";
 
-import Produto from "../../components/MainHome/CardProduto/CardProduto";
+import CardProduto from "../../components/MainHome/CardProduto/CardProduto";
 
 import './Home.css'
 
@@ -104,13 +103,14 @@ const Home = () => {
           <div className="container-produto">
 
             {newProducts.slice(0, 2).map((produto) => (
-              <Produto
+              <CardProduto
                 key={produto.product_id}
                 product_id={produto.product_id}
                 img_url={produto.img_url}
                 name={produto.name}
                 regular_price={produto.regular_price}
                 actual_price={produto.actual_price}
+                onSale={produto.on_sale}
               />
             ))}
 
@@ -133,6 +133,7 @@ const Home = () => {
               name={produto.name}
               regular_price={produto.regular_price}
               actual_price={produto.actual_price}
+              onSale={produto.on_sale}
             />
           ))}
         </div>

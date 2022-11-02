@@ -51,6 +51,7 @@ const Slide = ({idProdutoRemover, nomeCategoria}) => {
                                 name={product.name}
                                 regular_price={product.regular_price}
                                 actual_price={product.actual_price}
+                                onSale={product.on_sale}
                             />
                         )
                    })}
