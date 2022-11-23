@@ -21,7 +21,7 @@ const TelaUsuario = () => {
   }
 
   useEffect(() => {
-    axios.get(`http://localhost:5450/${userId}/pedidos`)
+    axios.get(`http://fashionista-eccomerce.up.railway.app/${userId}/pedidos`)
       .then(res => setOrders(res.data))
   }, [userId])
 

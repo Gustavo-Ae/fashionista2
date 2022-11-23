@@ -16,7 +16,7 @@ const Produto = () => {
   useEffect(() => {
     
     const buscarProdutoPeloId = async () => {
-      await axios.get(`http://localhost:5450/produtos/${params.id}`)
+      await axios.get(`http://fashionista-eccomerce.up.railway.app/produtos/${params.id}`)
       .then(res => setProduct(res.data))
     }
 

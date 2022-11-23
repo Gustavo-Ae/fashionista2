@@ -11,12 +11,12 @@ const Home = () => {
   const [saleProducts, setSaleProducts] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:5450/promocao/produtos/')
+    axios.get('http://fashionista-eccomerce.up.railway.app/promocao/produtos/')
       .then(res => setSaleProducts(res.data))
   }, [])
 
   useEffect(() => {
-    axios.get('http://localhost:5450/novidades/produtos/')
+    axios.get('http://fashionista-eccomerce.up.railway.app/novidades/produtos/')
       .then(res => setNewProducts(res.data))
   }, [])
 
