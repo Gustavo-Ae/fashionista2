@@ -36,7 +36,7 @@ const Catalogo = () => {
 
     if (category === 'Masculino' || category === 'Feminino' || category === 'Infantil') {
         useEffect(() => {
-            axios.get(`http://fashionista-eccomerce.up.railway.app/categorias/${category}`)
+            axios.get(`https://fashionista-eccomerce.up.railway.app/categorias/${category}`)
                 .then(res => setProducts(res.data))
         }, [category])
 
@@ -75,7 +75,7 @@ const Catalogo = () => {
         );
     } else if (category === 'Promocoes') {
         useEffect(() => {
-            axios.get('http://fashionista-eccomerce.up.railway.app/promocao/produtos')
+            axios.get('https://fashionista-eccomerce.up.railway.app/promocao/produtos')
                 .then(res => setProducts(res.data))
         }, [category])
 
@@ -114,7 +114,7 @@ const Catalogo = () => {
         )
     } else {
         useEffect(() => {
-            axios.get(`http://fashionista-eccomerce.up.railway.app/pesquisa/produtos/${category}`)
+            axios.get(`https://fashionista-eccomerce.up.railway.app/pesquisa/produtos/${category}`)
                 .then(res => setSearchProducts(res.data))
         }, [category])
 

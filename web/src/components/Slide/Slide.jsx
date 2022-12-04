@@ -14,7 +14,7 @@ const Slide = ({idProdutoRemover, nomeCategoria}) => {
     useEffect(() => {
 
         const buscarCategoriaPeloNome = async () => {
-            await axios.get(`http://localhost:5450/categorias/${nomeCategoria}`)
+            await axios.get(`https://fashionista-eccomerce.up.railway.app/categorias/${nomeCategoria}`)
             .then(res => setProduct((res.data).filter((produto) => produto.product_id !== idProdutoRemover)))
         }
 

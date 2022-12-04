@@ -32,7 +32,7 @@ const TelaCheckout = () => {
     const getInfoUserById = async () => {
 
       if(userId){
-        await axios.get(`http://fashionista-eccomerce.up.railway.app/user/${userId}`)
+        await axios.get(`https://fashionista-eccomerce.up.railway.app/user/${userId}`)
           .then(res => setInfoUser(res.data))
           .catch(function(error){
             console.log(error.response)
@@ -66,7 +66,7 @@ const TelaCheckout = () => {
       return
     };
     try {
-      await axios.post(`http://fashionista-eccomerce.up.railway.app/pedidos/${userId}`, {
+      await axios.post(`https://fashionista-eccomerce.up.railway.app/pedidos/${userId}`, {
         payment_mode_id: paymentModeId,
         order_total: totalPrice,
         products: productsCart

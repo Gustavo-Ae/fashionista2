@@ -85,7 +85,7 @@ const TelaLogin = () => {
     axios.defaults.withCredentials = true;
 
     try {
-      axios.post(`http://fashionista-eccomerce.up.railway.app/cadastro`, {
+      axios.post(`https://fashionista-eccomerce.up.railway.app/cadastro`, {
         name: data.name + " " + data.surname,
         gender_id: genderId,
         email: data.email,
@@ -114,7 +114,7 @@ const TelaLogin = () => {
     const data = Object.fromEntries(formData)
 
     try {
-      const response = await axios.post(`http://fashionista-eccomerce.up.railway.app/login`, {
+      const response = await axios.post(`https://fashionista-eccomerce.up.railway.app/login`, {
         email: data.email,
         password: data.password
       })
