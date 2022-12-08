@@ -3,128 +3,88 @@ a{
     text-decoration: none;
 }
 
-@media (height: 720px) and (width: 1280px){
-    .container-banner{
-        margin-top: 5rem
-    }
+.banner{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #e6e6e6;
+
+    background-image: url('../../assets/background-image.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
 }
 
-@media (height: 800px) and (width: 1280px){
-    .container-banner{
-        margin-top: 3rem
+.banner__header__container h1{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 800;
+    font-size: 5rem;
+    line-height: 76px;
+    margin-bottom: 20px;
+}
+
+.banner__header__container p{
+    font-family: 'Poppins';
+    line-height: 30px;
+    color: #111;
+}
+
+.banner__header__container a{
+    display: inline-block;
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 1rem 3rem 1rem 3rem;
+    margin-top: 1rem;
+    background: #111;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.banner__header__container a:hover{
+    transform: scale(1.05);
+    color: #f9004d;
+}
+
+.banner__container__imagem{
+    height: 80%;
+    margin-top: 6rem;
+}
+
+.banner__container__imagem img {
+    height: 100%;
+    border-bottom-left-radius: 60px;
+    margin: 10px 0;
+}
+
+@media (max-width: 444px){
+    .banner__header__container h1{
+        font-size: 4rem;
+        line-height: 65px;
+        margin-bottom: 2px;
+    }
+
+    .banner__header__container p {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 1024px) {
-    .container-banner {
-        display: flex;
-        justify-content: flex-start;
+    .banner{
+        height: 100%;
         flex-direction: column;
-        align-items: center;
-        background-image: url('../../assets/background-image.svg');
-        background-repeat: no-repeat;
-        background-position: center bottom;
     }
 
-    .container-banner-image img {
+    .banner__container__imagem img{
         max-height: 27.5rem;
-        margin-top: 3rem;
+        margin-top: 0rem;
         margin-bottom: 2rem;
     }
 
-    .container-banner-text{
-        display: flex;
-        justify-content: flex-start;
-        gap: 2rem;
-        margin-left: 1rem;
-        flex-direction: column;
+    .banner__header__container{
         margin-top: 2rem;
-        padding: 1rem;
-    }
-
-    .container-banner-text h1 {
-        font-family: 'Frank Ruhl Libre', serif;
-        font-size: 3rem;
-    }
-
-    .container-banner-text p {
-        font-family: 'Poppins';
-        font-size: 1rem;
-    }
-
-    .container-banner-text a {
-        display: inline-block;
-        font-family: 'Poppins';
-        font-size: 1.1rem;
-        padding: 1rem 3rem 1rem 3rem;
-        width: 50%;
-        background: #111;
-        color: #fff;
-        border-radius: 5px;
-        transition: all 0.5s ease;
-        text-align: center;
-    }
-
-    .container-banner-text a:hover {
-        transform: scale(1.05);
-        color: #f9004d;
-    }
-
-}
-
-@media (min-width: 1024px) {
-    .container-banner {
-        height: 80vh;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background: #e6e6e6;
-
-        background-image: url('../../assets/background-image.svg');
-        background-repeat: no-repeat;
-        background-position: center bottom calc(0.375em + 0.1rem);
-        background-size: 100%;
-    }
-
-    .container-banner-text h1 {
-        font-family: 'Frank Ruhl Libre', serif;
-        font-size: 5rem;
-        line-height: 76px;
-        margin-bottom: 20px;
-    }
-
-    .container-banner-text p {
-        font-family: 'Poppins';
-        line-height: 30px;
-        color: #111;
-    }
-
-    .container-banner-text a {
-        display: inline-block;
-        font-family: 'Poppins';
-        font-size: 1.1rem;
-        padding: 1rem 3rem 1rem 3rem;
-        margin-top: 1rem;
-        background: #111;
-        color: #fff;
-        border-radius: 5px;
-        transition: all 0.5s ease;
-    }
-
-    .container-banner-text a:hover {
-        transform: scale(1.05);
-        color: #f9004d;
-    }
-
-    .container-banner-image{
-        height: 80%;
-        margin-top: 6rem;
-    }
-
-    .container-banner-image img {
-        height: 100%;
-        border-bottom-left-radius: 60px;
-        margin: 10px 0;
     }
 }
 

@@ -21,25 +21,26 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="main-container">
-      <div className="container-banner">
-        <div className="container-banner-text">
+    <>
+      <div className="banner">  
+        <div className="banner__header__container"> 
           <h1>
             Encontre o <br />
             melhor da <br />moda
           </h1>
-          <p className="banner">
+          <p>
             Aqui você encontra roupas femininas, moda <br />
             infantil, moda masculina e muito mais. Confira <br />
             as promoções e aproveite!
           </p>
-          <a href="/catalogo/Promocoes">Melhores Ofertas</a>
+          <Link to="/catalogo/Promocoes">Melhores Ofertas</Link>
         </div>
 
-        <div className="container-banner-image">
+        <div className="banner__container__imagem">
           <img src='/assets/img/banner.jpg' alt="imagem produto feminino" />
         </div>
       </div>
+
       <div className="container-categorias">
         <div className="container-categorias-text">
           <h1 className="categorias-title">Categorias</h1>
@@ -83,6 +84,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div id="novidades">
         <div className="container-novidades">
           <div className="container-novidades-text">
@@ -113,7 +115,6 @@ const Home = () => {
                 onSale={produto.on_sale}
               />
             ))}
-
           </div>
         </div>
       </div>
@@ -138,8 +139,7 @@ const Home = () => {
           ))}
         </div>
       </div>  
-
-    </div>
+    </>        
   );
 };
 
