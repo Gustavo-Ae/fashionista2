@@ -86,24 +86,25 @@ const Home = () => {
         </div>
       </section>
 
-      <div id="novidades">
-        <div className="container-novidades">
-          <div className="container-novidades-text">
-            <h1 className="novidades-title">Novidades</h1>
-            <p className="novidades-text">
+      <section id="novidades">
+        <div className="novidades__container"> {/* novidades__container */}
+
+          <div className="novidades__header__container"> {/* novidades__header__container */}
+            <h1>Novidades</h1>
+            <p>
               As melhores novidades no mundo <br />
               da moda!
             </p>
             <a
               href='#melhoresOfertas'
-              className="btn-branco btn-aproveite"
+              className="btn-branco btn__aproveite"
               aria-label="Aproveite as novidades"
             >
               APROVEITE
             </a>
           </div>
 
-          <div className="container-produto">
+          <div className="produto__container">
 
             {newProducts.slice(0, 2).map((produto) => (
               <CardProduto
@@ -118,7 +119,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </div>
+      </section>
       
       <div className="melhoresOfertas" id="melhoresOfertas">
         <div className="melhoresOfertas__header__container">
