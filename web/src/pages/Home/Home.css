@@ -90,135 +90,84 @@ a{
 
 /* Categorias */
 
-.container-categorias{
+.categoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
     background: #e6e6e6;
 }
 
-@media screen and (max-width: 1024px){
-    .container-categorias {
-        font-family: 'Poppins';
-        padding: 119px 0;
-    }
-    
-    .categorias-title {
-        font-family: 'Frank Ruhl Libre';
-        font-size: 3.75rem;
-    }
-    
-    .container-categorias-text {
-        text-align: center;
-        margin: 2rem;
-    }
-    
-    .categorias-text {
-        padding-top: 20px;
-    }
-    
-    .categorias {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 20px 0;
-    }
-    
-    .categoria {
-        position: relative;
-        padding: 20px 0;
-        transition: all 0.5s ease;
-    }
-    
-    .categoria:hover {
-        transform: scale(1.1);
-        color: #f9004d;
-    }
-    
-    .categoria img {
-        height: 407px;
-        width: 326px;
-        object-fit: cover;
-    }
-    
-    .categoria-name {
-        position: absolute;
-        font-weight: bolder;
-        font-family: 'Poppins';
-        bottom: 10%;
-        left: 0;
-        right: 0;
-        margin: auto;
-        z-index: 1;
-        background: #fff;
-        padding: 0.5rem 1rem;
-        text-align: center;
-        width: 100%;
-        max-width: 254px;
+.categoria__header__container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.categoria__header__container h1 {
+    font-family: 'Frank Ruhl Libre';
+    font-weight: 800;
+    font-size: 3.75rem;
+}
+
+.categoria__header__container p{
+    margin-top: 1rem;
+}
+
+.categoria__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.categoria__card {
+    margin-left: 30px;
+    position: relative;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.categoria__card:hover {
+    transform: scale(1.1);
+    color: #f9004d;
+}
+
+.categoria__card img {
+    height: 407px;
+    width: 326px;
+    object-fit: cover;
+}
+
+.categoria__card__name {
+    position: absolute;
+    font-weight: bolder;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 254px;
+}
+
+@media (max-width: 430px){
+    .categoria__card img {
+        height: 366px;
+        width: 278px;
     }
 }
 
-@media screen and (min-width: 1024px) {
-    .container-categorias {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        font-family: 'Poppins';
-        height: 90vh;
-    }
-
-    .categorias-title {
-        font-family: 'Frank Ruhl Libre';
-        font-size: 3.75rem;
-    }
-
-    .container-categorias-text {
-        text-align: center;
-    }
-
-    .categorias-text{
-        margin-top: 1rem;
-    }
-
-    .categorias {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 0;
-    }
-
+@media (max-width: 1145px){
     .categoria {
-        margin-left: 30px;
-        position: relative;
-        padding: 20px 0;
-        transition: all 0.5s ease;
+        height: 100%;
     }
-
-    .categoria:hover {
-        transform: scale(1.1);
-        color: #f9004d;
-    }
-
-    .categoria img {
-        height: 407px;
-        width: 326px;
-        object-fit: cover;
-    }
-
-    .categoria-name {
-        position: absolute;
-        font-weight: bolder;
-        font-family: 'Poppins';
-        bottom: 10%;
-        left: 0;
-        right: 0;
-        margin: auto;
-        z-index: 1;
-        background: #fff;
-        padding: 0.5rem 1rem;
-        text-align: center;
-        width: 100%;
-        max-width: 254px;
+    
+    .categoria__container {
+        flex-wrap: wrap;
     }
 }
 

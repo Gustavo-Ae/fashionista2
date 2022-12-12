@@ -41,49 +41,50 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container-categorias">
-        <div className="container-categorias-text">
-          <h1 className="categorias-title">Categorias</h1>
-          <p className="categorias-text">
+      <section className="categoria"> 
+        
+        <div className="categoria__header__container">
+          <h1>Categorias</h1>
+          <p>
             Moda feminina, masculina e infantil! Confira nossas promoções e
             aproveite!
           </p>
         </div>
 
-        <div className="categorias">
-          <div className="categoria">
+        <div className="categoria__container">
+          <div className="categoria__card"> 
 
             <Link to="catalogo/Feminino">
               <img src="/assets/img/feminino/14.jpg" alt="" />
-              <span className="categoria-name">MODA FEMININA</span>
+              <span className="categoria__card__name">MODA FEMININA</span> 
             </Link>
 
           </div>
 
-          <div className="categoria">
+          <div className="categoria__card">
 
             <Link to="catalogo/Masculino">
               <img
                 src="/assets/img/masculino/05.jpg"
                 alt=""
               />
-              <span className="categoria-name"> MODA MASCULINA </span>
+              <span className="categoria__card__name"> MODA MASCULINA </span>
             </Link>
 
           </div>
 
-          <div className="categoria">
+          <div className="categoria__card">
 
             <Link to="catalogo/Infantil">
               <img
                 src="/assets/img/infantil/07.jpg"
                 alt=""
               />
-              <span className="categoria-name"> MODA INFANTIL </span>
+              <span className="categoria__card__name"> MODA INFANTIL </span>
             </Link>
           </div>
         </div>
-      </div>
+      </section>
 
       <div id="novidades">
         <div className="container-novidades">
