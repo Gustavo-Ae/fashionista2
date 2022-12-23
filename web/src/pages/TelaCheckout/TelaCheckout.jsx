@@ -56,6 +56,11 @@ const TelaCheckout = () => {
       paymentModeId = '73c9f163-5cd4-4367-a1f4-ac8d5f48df5c'
     }
 
+    if(totalItems === 0){
+      alert("Carrinho Vázio - [Antes de finalizar a compra adicione algum produto]")
+      return
+    }
+
     if (!isLogged) {
       alert('Crie uma conta para poder fazer seu pedido')
       return
@@ -65,6 +70,7 @@ const TelaCheckout = () => {
       alert('Informe o modo de pagamento.')
       return
     };
+
     try {
       await axios.post(`https://fashionista-eccomerce.up.railway.app/pedidos/${userId}`, {
         payment_mode_id: paymentModeId,
