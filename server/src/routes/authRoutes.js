@@ -16,8 +16,6 @@ router.route("/cadastro").post(async (req, res) => {
 
   const { email, password } = signUpData;
 
-  const hashPassword = await bcrypt.hash(password, 10);
-
   if (!signUpData) {
     return res.status(400).json({
       message:
@@ -30,6 +28,7 @@ router.route("/cadastro").post(async (req, res) => {
   }
 
   try {
+    const hashPassword = await bcrypt.hash(password, 10);
     const user = await userData
       .createNewUser(signUpData, hashPassword)
       .then((user) => {

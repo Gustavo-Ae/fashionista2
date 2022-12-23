@@ -78,9 +78,9 @@ const TelaLogin = () => {
       genderId = '6d6655f6-57de-4b87-8f26-1eaf5f0d4a48'
     }
 
-    if (data.password !== data.confirm_password) alert('As senhas não são iguais.')
+    if(data.password !== data.confirm_password) return alert('As senhas não são iguais.')
 
-    if (data.password.length < 6) alert('A senha precisa ter mais que 6 caracteres.')
+    if(data.password.length < 6) return alert('A senha precisa ter mais que 6 caracteres.') 
 
     axios.defaults.withCredentials = true;
 
@@ -98,8 +98,8 @@ const TelaLogin = () => {
         district: data.district,
         address_number: data.address_number,
         city: data.city,
-        uf: data.uf
-      })
+        uf: data.uf,
+      });
       alert("Usuário criado com sucesso!")
     } catch (e) {
       console.log(e);
