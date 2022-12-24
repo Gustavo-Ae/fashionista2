@@ -130,9 +130,9 @@ const TelaCheckout = () => {
   return (
     <main className="TelaCheckout__container">
       <section className="checkoutInfo__container">
-        <Titulo>{isLogged ? 'Modo de Pagamento' : 'Dados do Pedido'}</Titulo>
+        <Titulo>{isLogged && 'Modo de Pagamento'}</Titulo>
 
-        {!isLogged && <div className="perguntaCadastro__container">
+        {!isLogged ? <div className="perguntaCadastro__container">
           <div className="perguntaCadastro">
             <p className="perguntaCadastro__p">Não possui uma conta?</p>
             <Link to="/login"><Button type="button">CADASTRE-SE</Button></Link>
@@ -141,7 +141,7 @@ const TelaCheckout = () => {
             <p className="perguntaCadastro__p">Já possui cadastro ?</p>
             <Link to="/login"><Button type="button">FAÇA SEU LOGIN</Button></Link>
           </div>
-        </div>}
+        </div> : 
         <form name="checkout-form" className="opcoesPagamento">
           <Input
             type="radio"
@@ -150,7 +150,7 @@ const TelaCheckout = () => {
             value="boleto"
             onChange={handleOpcaoPagamentoChange}
           />
-        </form>
+        </form> }
       </section>
 
       <BarraLateral />
@@ -227,7 +227,6 @@ const TelaCheckout = () => {
           </select>
         </div>
       </section>
-
 
       <BarraLateral />
 
